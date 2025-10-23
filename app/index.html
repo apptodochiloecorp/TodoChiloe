@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo Chiloé</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>?? Todo Chiloé</h1>
+    </header>
+
+    <!-- Vista principal -->
+    <main id="mainCard">
+      <section class="main-section">
+        <div class="sidebar">
+          <ul>
+            <li id="btnHorarios">?? Horarios de Chiloé</li>
+            <li id="btnEventos">?? Eventos Chilotes</li>
+            <li id="btnTurismo">??? Servicios y Turismo</li>
+            <li id="btnInfo">?? Información General</li>
+          </ul>
+        </div>
+        <div class="content">
+          <p>Una aventura bien vivida, esta en Chiloé. Disfruta de la experiencia que ofrece y entérate de todo con nosotros.</p>
+        </div>
+      </section>
+
+      <!-- Horarios -->
+      <section class="view" id="horariosView" hidden>
+        <button class="btn" id="btnBackHorarios">? Volver</button>
+        <div class="horarios-section">
+          <div class="sidebar">
+            <ul id="communeList">
+              <li>Ancud</li>
+              <li>Castro</li>
+              <li>Chonchi</li>
+              <li>Dalcahue</li>
+              <li>Curaco de Vélez</li>
+              <li>Quellón</li>
+              <li>Quemchi</li>
+              <li>Puqueldón</li>
+              <li>Quinchao</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h2 id="comunaTitle">Selecciona una comuna</h2>
+            <p id="scheduleText">Aquí aparecerán los horarios de ida y vuelta a Castro.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eventos -->
+      <section class="view" id="eventosView" hidden>
+        <button class="btn" id="btnBackEventos">? Volver</button>
+        <h2>Eventos Chilotes</h2>
+        <p>Sección lista para agregar eventos.</p>
+      </section>
+
+      <!-- Turismo -->
+      <section class="view" id="turismoView" hidden>
+        <button class="btn" id="btnBackTurismo">? Volver</button>
+        <h2>Servicios y Turismo</h2>
+        <p>Sección lista para agregar servicios y lugares turísticos.</p>
+      </section>
+
+      <!-- Información General -->
+      <section class="view" id="infoView" hidden>
+        <button class="btn" id="btnBackInfo">? Volver</button>
+        <h2>Información General</h2>
+        <p>Sección lista para agregar información general de Chiloé.</p>
+      </section>
+    </main>
+
+    <footer>© 2025 Todo Chiloé</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

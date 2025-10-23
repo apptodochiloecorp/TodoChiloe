@@ -1,0 +1,44 @@
+// Mostrar y ocultar secciones principales
+const mainCard = document.querySelector('#mainCard');
+
+const btnHorarios = document.querySelector('#btnHorarios');
+const btnEventos = document.querySelector('#btnEventos');
+const btnTurismo = document.querySelector('#btnTurismo');
+const btnInfo = document.querySelector('#btnInfo');
+
+const horariosView = document.querySelector('#horariosView');
+const eventosView = document.querySelector('#eventosView');
+const turismoView = document.querySelector('#turismoView');
+const infoView = document.querySelector('#infoView');
+
+const btnBackHorarios = document.querySelector('#btnBackHorarios');
+const btnBackEventos = document.querySelector('#btnBackEventos');
+const btnBackTurismo = document.querySelector('#btnBackTurismo');
+const btnBackInfo = document.querySelector('#btnBackInfo');
+
+btnHorarios.addEventListener('click', () => { mainCard.hidden = true; horariosView.hidden = false; });
+btnBackHorarios.addEventListener('click', () => { horariosView.hidden = true; mainCard.hidden = false; });
+
+btnEventos.addEventListener('click', () => { mainCard.hidden = true; eventosView.hidden = false; });
+btnBackEventos.addEventListener('click', () => { eventosView.hidden = true; mainCard.hidden = false; });
+
+btnTurismo.addEventListener('click', () => { mainCard.hidden = true; turismoView.hidden = false; });
+btnBackTurismo.addEventListener('click', () => { turismoView.hidden = true; mainCard.hidden = false; });
+
+btnInfo.addEventListener('click', () => { mainCard.hidden = true; infoView.hidden = false; });
+btnBackInfo.addEventListener('click', () => { infoView.hidden = true; mainCard.hidden = false; });
+
+// Selección de comuna
+const communeList = document.querySelectorAll('#communeList li');
+const comunaTitle = document.querySelector('#comunaTitle');
+const scheduleText = document.querySelector('#scheduleText');
+
+communeList.forEach(item => {
+  item.addEventListener('click', () => {
+    communeList.forEach(li => li.classList.remove('active'));
+    item.classList.add('active');
+
+    comunaTitle.textContent = item.textContent;
+    scheduleText.textContent = "Horarios de ida y vuelta a Castro (placeholder).";
+  });
+});
